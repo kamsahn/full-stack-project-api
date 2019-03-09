@@ -1,11 +1,9 @@
-class RecipesController < OpenReadController
+class RecipesController < ProtectedController
   before_action :set_recipe, only: [:show, :update, :destroy]
 
   # GET /recipes
   def index
-    @recipes = Recipe.all
-    # use when operating in the app
-    # @recipes = current_user.recipes
+    @recipes = current_user.recipes
 
     render json: @recipes
   end
