@@ -17,7 +17,6 @@ class RecipesController < ProtectedController
   def create
     @recipe = current_user.recipes.create(recipe_params)
 
-
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe
     else
