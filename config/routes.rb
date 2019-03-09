@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # ingredients routes
+  resources :ingredients, except: %i[new edit]
   # recipes routes
   resources :recipes, except: %i[new edit]
   # RESTful routes
