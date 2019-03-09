@@ -1,5 +1,6 @@
 class RecipeSerializer < ActiveModel::Serializer
-  attributes :id, :name, :ingredients_list
+  attributes :id, :name, :description, :ingredients_list
+  has_many :directions
 
   def ingredients_list
     object.meals.map do |meal|
