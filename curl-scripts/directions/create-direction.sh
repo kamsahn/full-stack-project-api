@@ -1,15 +1,14 @@
 #!/bin/bash
 
-curl "http://localhost:4741/recipes" \
+curl "http://localhost:4741/directions" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "recipe": {
-      "name": "'"${NAME}"'",
-      "user_id": "'"${USER}"'",
-      "description": "'"${DESC}"'"
+    "direction": {
+      "step": "'"${STEP}"'",
+      "recipe_id": "'"${REC}"'"
     }
   }'
 
