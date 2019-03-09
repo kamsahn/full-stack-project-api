@@ -4,8 +4,8 @@ class RecipeSerializer < ActiveModel::Serializer
   def ingredients_list
     object.meals.map do |meal|
       {
-        # unit: meal.unit,
         amount: meal.amount,
+        unit: meal.unit,
         ingredient: meal.ingredient.name
       }
     end
