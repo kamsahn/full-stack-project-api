@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/ingredients" \
+curl "https://fullstackrecipe.herokuapp.com/ingredients" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
