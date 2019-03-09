@@ -1,9 +1,11 @@
-class RecipesController < ProtectedController
+class RecipesController < OpenReadController
   before_action :set_recipe, only: [:show, :update, :destroy]
 
   # GET /recipes
   def index
-    @recipes = current_user.recipes
+    @recipes = Recipe.all
+    # use when client is ready
+    # @recipes = current_user.recipes
 
     render json: @recipes
   end
