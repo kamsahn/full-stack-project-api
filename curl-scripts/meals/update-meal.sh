@@ -1,14 +1,12 @@
 #!/bin/bash
 
-curl "http://localhost:4741/meals" \
+curl "http://localhost:4741/meals/${ID}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "meal": {
-      "recipe_id": "'"${REC}"'",
-      "ingredient_id": "'"${ING}"'",
       "amount": "'"${AMOUNT}"'",
       "unit": "'"${UNIT}"'"
     }
