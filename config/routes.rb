@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # meals routes (recipe and ingredient join table)
+  resources :meals, except: %i[new edit]
   # ingredients routes
   resources :ingredients, except: %i[new edit]
   # recipes routes
