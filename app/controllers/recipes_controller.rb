@@ -3,9 +3,9 @@ class RecipesController < OpenReadController
 
   # GET /recipes
   def index
-    @recipes = Recipe.all
+    # @recipes = Recipe.all
     # use when client is ready
-    # @recipes = current_user.recipes
+    @recipes = current_user.recipes
 
     render json: @recipes
   end
