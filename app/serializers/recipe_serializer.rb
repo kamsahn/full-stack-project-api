@@ -7,6 +7,7 @@ class RecipeSerializer < ActiveModel::Serializer
       {
         amount: meal.amount,
         unit: meal.unit,
+        meal_id: meal.id,
         ingredient: meal.ingredient.name,
         ingredient_id: meal.ingredient.id
       }
