@@ -12,7 +12,7 @@
 
 ## Overview
 
-A web app that allows users to create their own recipes. They can be stored, edited and removed at the users' request. Authentication is required to use the app.
+A web app that allows users to create their own recipes. They can be stored, edited and removed at the users' request. Authentication is required to use the app. Recipes will not be available to view on the heroku page because the get recipes link it tied with the current user's information. Other resources are meant to be shared between users in order to reduce the number of duplicated resources. E.g. there should only be one flour resource for many recipes.
 
 ## Technologies Used
 
