@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://fullstackrecipe.herokuapp.com/recipes/${ID}" \
+curl "http://localhost:4741/recipes/${ID}" \
   --include \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}" \
