@@ -1,4 +1,4 @@
-class DirectionsController < ApplicationController
+class DirectionsController < ProtectedController
   before_action :set_direction, only: [:show, :update, :destroy]
 
   # GET /directions
@@ -15,7 +15,7 @@ class DirectionsController < ApplicationController
 
   # POST /directions
   def create
-    @direction = Direction.new(direction_params)
+    @direction = current_user.directions.create(direction_params)
 
     if @direction.save
       render json: @direction, status: :created, location: @direction
@@ -41,7 +41,7 @@ class DirectionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_direction
-      @direction = Direction.find(params[:id])
+      @direction = current_user.directions.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
