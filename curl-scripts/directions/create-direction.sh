@@ -8,7 +8,8 @@ curl "http://localhost:4741/directions" \
   --data '{
     "direction": {
       "step": "'"${STEP}"'",
-      "recipe_id": "'"${REC}"'"
+      "recipe_id": "'"${REC}"'",
+      "user_id": "'"${USER}"'"
     }
   }'
 
