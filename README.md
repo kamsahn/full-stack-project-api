@@ -1,4 +1,4 @@
-# Cookbook Web App API
+# Cookbook Web App CLient
 
 ## Links
 
@@ -12,17 +12,11 @@
 
 ## Overview
 
-A web app that allows users to create their own recipes. They can be stored, edited and removed at the users' request. Authentication is required to use the app. Recipes will not be available to view on the heroku page because the get recipes link it tied with the current user's information. Other resources are meant to be shared between users in order to reduce the number of duplicated resources. E.g. there should only be one flour resource for many recipes.
+A web app that allows users to create their own recipes. They can be stored, edited and removed at the users' request. Authentication is required to use the app.
 
 ## Technologies Used
 
 HTML5, CSS, JavaScript, Bootstrap, SASS, Handlebars, jQuery, Ruby on Rails, SQL, git
-
-## Unsolved Problems
-
-Currently, the app database is underutilized. There is a many-to-many relationship between recipes and ingredients, but the app currently treats them as one-to-many. Upon future iterations, there will be reworking to allow the backend to search if an ingredient already exists before creating a new instance of the same ingredient name.
-
-Upon future iterations, the app will support social interaction and let users share recipes with friends other the app.
 
 ## Development Process
 
@@ -52,3 +46,9 @@ As a user, I want to add friends with this app
 ## Entity Relationship Diagram
 
 [ERD](https://i.imgur.com/Bn6YY5Y.jpg)
+
+## Unsolved Problems
+
+Currently, the app database is underutilized. There is a many-to-many relationship between recipes and ingredients, but the app currently treats them as one-to-many. Upon future iterations, there will be reworking to allow the backend to search if an ingredient already exists before creating a new instance of the same ingredient name.
+
+Upon future iterations, the app will support social interaction and let users share recipes with friends other the app.
